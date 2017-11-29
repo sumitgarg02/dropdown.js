@@ -403,7 +403,12 @@
       if ($this.prop("disabled")) {
         $option.addClass("disabled");
       }
-
+      
+      if ($this.prop("class")) {
+          var className = $this.attr('class');
+          $option.addClass(className);
+      }
+      
       // Append option to our dropdown
       if ($ul.find(".dropdownjs-add").length) {
         $ul.find(".dropdownjs-add").before($option);
